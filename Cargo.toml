@@ -1,0 +1,102 @@
+[package]
+name = "btc-relay"
+version = "2.0.8-1"
+authors = ["The ChainX Authors"]
+edition = "2018"
+build = "build.rs"
+description = "Relay BTC header and transactions to a ChainX node via RPC"
+readme = "README.md"
+license = "GPL-3.0"
+
+[[bin]]
+name = "btc-relay"
+path = "src/bin/main.rs"
+# required-features = ["bitcoin"]
+
+# [[bin]]
+# name = "doge-relay"
+# path = "src/bin/main.rs"
+# required-features = ["dogecoin"]
+
+[features]
+std = [
+  "codec/std"
+]
+bitcoin = ["std"]
+dogecoin = ["std"]
+
+[patch.crates-io]
+sp-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-application-crypto = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-arithmetic = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-authorship = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-inherents = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-io = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-keystore = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-rpc = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-runtime-interface = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-session = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-staking = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-state-machine = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-std = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-storage = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-timestamp = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-tracing = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-trie = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-version = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+
+frame-benchmarking = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+frame-support = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+frame-system = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+
+pallet-authorship = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+pallet-indices = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+pallet-session = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+pallet-timestamp = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+pallet-staking = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+
+substrate-subxt = { git = "https://github.com/chainx-org/substrate-subxt", branch = "master" }
+
+[dependencies]
+anyhow = "1.0"
+async-trait = "0.1.49"
+bs58 = "0.3"
+base64 = "0.12"
+codec = { package = "parity-scale-codec", version = "2.1.0", features = ["derive"] }
+futures = "0.3.14"
+hex = "0.4"
+lazy_static = "1.4"
+log = { version = "0.4", features = ["std", "serde"] }
+log4rs = "0.11"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+structopt = "0.3"
+thiserror = "1.0"
+tokio = { version = "1.4", features = ["macros", "rt", "rt-multi-thread", "time"] }
+url = { version = "2.1", features = ["serde"] }
+
+reqwest = { version = "0.11", features = ["json"] }
+
+async-io = "1.3.1"
+
+# Substrate (v3)
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+pallet-indices = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.1" }
+# sp-core = { version = "3.0" }
+# sp-runtime = { version = "3.0" }
+# sp-keyring = { version = "3.0" }
+# pallet-indices = { version = "3.0" }
+subxt = { package = "substrate-subxt", version = "0.15" }
+
+# light-bitcoin
+light-bitcoin = { git = "https://github.com/chainx-org/light-bitcoin", branch = "btc-like" }
+
+# ChainX
+xp-gateway-bitcoin-v2 = { package = "xpallet-gateway-bitcoin-v2", git = "https://github.com/chainx-org/ChainX", branch = "rococo-v1" }
+xp-gateway-bitcoin = { git = "https://github.com/chainx-org/ChainX", branch="rococo-v1", features = ["ss58check"] }
+
+#cli

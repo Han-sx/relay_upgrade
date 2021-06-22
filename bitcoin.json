@@ -1,0 +1,13 @@
+{
+  "block-chain-type": "Bitcoin",
+  "chain-url": "http://auth:bitcoin-b2dd077@115.29.163.193:18332",
+  "chain-block-interval": 120,
+  "chainx-url": "http://117.51.148.252:8086",
+  "chainx-signer": "//Alice",
+  "only-header": false,
+  "log-path": "log/btc_relay.log",
+  "log-level": "DEBUG",
+  "log-roll-size": 100,
+  "log-roll-count": 5,
+  "rpc-timeout": 30
+}

@@ -1,0 +1,13 @@
+{
+  "block-chain-type": "Dogecoin",
+  "chain-url": "http://auth:dogecoin-1c2s4d@116.85.70.172:18337",
+  "chain-block-interval": 120,
+  "chainx-url": "http://117.51.148.252:8086",
+  "chainx-signer": "//Alice",
+  "only-header": false,
+  "log-path": "log/btc_relay.log",
+  "log-level": "DEBUG",
+  "log-roll-size": 100,
+  "log-roll-count": 5,
+  "rpc-timeout": 30
+}

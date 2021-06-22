@@ -1,0 +1,516 @@
+// Copyright 2019-2020 ChainX Project Authors. Licensed under GPL-3.0.
+
+use std::marker::PhantomData;
+
+use codec::{Decode, Encode};
+use futures::future::BoxFuture;
+use subxt::{module, system::System, Call, Store};
+
+use light_bitcoin::{
+    chain::{BlockHeader as BtcBlockHeader, Transaction as BtcTransaction},
+    keys::Network as BtcNetwork,
+    merkle::PartialMerkleTree,
+    primitives::H256,
+};
+
+use super::types::*;
+
+// ============================================================================
+// Module
+// ============================================================================
+
+/// The subset of the `xpallet_gateway::bitcoin::Trait`.
+#[module]
+pub trait XGatewayDogecoin: System {}
+
+// ============================================================================
+// Storage
+// ============================================================================
+
+/// NetworkId field of the `XGatewayDogecoin` module.
+#[derive(Clone, Debug, Eq, PartialEq, Encode, Store)]
+pub struct NetworkIdStore<T: XGatewayDogecoin> {
+    #[store(returns = BtcNetwork)]
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+}
+
+/// BtcWithdrawalFee field of the `XGatewayDogecoin` module.
+#[derive(Clone, Debug, Eq, PartialEq, Encode, Store)]
+pub struct BtcWithdrawalFeeStore<T: XGatewayDogecoin> {
+    #[store(returns = u64)]
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+}
+
+/// BtcMinDeposit field of the `XGatewayDogecoin` module.
+#[derive(Clone, Debug, Eq, PartialEq, Encode, Store)]
+pub struct BtcMinDepositStore<T: XGatewayDogecoin> {
+    #[store(returns = u64)]
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+}
+
+/// BestIndex field of the `XGatewayDogecoin` module.
+#[derive(Clone, Debug, Eq, PartialEq, Encode, Store)]
+pub struct BestIndexStore<T: XGatewayDogecoin> {
+    #[store(returns = BtcHeaderIndex)]
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+}
+
+/// ConfirmedIndex field of the `XGatewayDogecoin` module.
+// #[derive(Clone, Debug, Eq, PartialEq, Encode, Store)]
+#[derive(Clone, Debug, Eq, PartialEq, Encode)]
+pub struct ConfirmedIndexStore<T: XGatewayDogecoin> {
+    // #[store(returns = BtcHeaderIndex)]
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+}
+
+impl<T: XGatewayDogecoin> subxt::Store<T> for ConfirmedIndexStore<T> {
+    const MODULE: &'static str = MODULE;
+    const FIELD: &'static str = "ConfirmedIndex";
+    type Returns = BtcHeaderIndex;
+    fn prefix(
+        metadata: &subxt::Metadata,
+    ) -> Result<subxt::sp_core::storage::StorageKey, subxt::MetadataError> {
+        Ok(metadata
+            .module(Self::MODULE)?
+            .storage(Self::FIELD)?
+            .prefix())
+    }
+    fn key(
+        &self,
+        metadata: &subxt::Metadata,
+    ) -> Result<subxt::sp_core::storage::StorageKey, subxt::MetadataError> {
+        Ok(metadata
+            .module(Self::MODULE)?
+            .storage(Self::FIELD)?
+            .plain()?
+            .key())
+    }
+}
+
+/// Store extension trait.
+pub trait ConfirmedIndexStoreExt<T: subxt::Runtime + XGatewayDogecoin> {
+    /// Retrieve the store element.
+    fn confirmed_index(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'_, Result<Option<BtcHeaderIndex>, subxt::Error>>;
+    /// Iterate over the store element.
+    fn confirmed_index_iter(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'_, Result<subxt::KeyIter<T, ConfirmedIndexStore<T>>, subxt::Error>>;
+}
+impl<T: subxt::Runtime + XGatewayDogecoin> ConfirmedIndexStoreExt<T> for subxt::Client<T> {
+    fn confirmed_index(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'_, Result<Option<BtcHeaderIndex>, subxt::Error>> {
+        let _runtime = core::marker::PhantomData::<T>;
+        Box::pin(async move { self.fetch(&ConfirmedIndexStore { _runtime }, hash).await })
+    }
+    fn confirmed_index_iter(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'_, Result<subxt::KeyIter<T, ConfirmedIndexStore<T>>, subxt::Error>> {
+        Box::pin(self.iter(hash))
+    }
+}
+
+/// BlockHashFor field of the `XGatewayDogecoin` module.
+#[derive(Clone, Debug, Eq, PartialEq, Encode, Store)]
+pub struct BlockHashForStore<T: XGatewayDogecoin> {
+    #[store(returns = Vec<H256>)]
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+    /// Height to retrieve the `Vec<H256>` for.
+    pub height: u32,
+}
+
+/// Headers field of the `XGatewayDogecoin` module.
+// #[derive(Clone, Debug, Eq, PartialEq, Encode, Store)]
+#[derive(Clone, Debug, Eq, PartialEq, Encode)]
+pub struct HeadersStore<'a, T: XGatewayDogecoin> {
+    // #[store(returns = BtcHeaderInfo)]
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+    /// Headers to retrieve the `Option<BtcHeaderInfo>` for.
+    pub block_hash: &'a H256,
+}
+
+impl<'a, T: XGatewayDogecoin> subxt::Store<T> for HeadersStore<'a, T> {
+    const MODULE: &'static str = MODULE;
+    const FIELD: &'static str = "Headers";
+    type Returns = BtcHeaderInfo;
+    fn prefix(
+        metadata: &subxt::Metadata,
+    ) -> Result<subxt::sp_core::storage::StorageKey, subxt::MetadataError> {
+        Ok(metadata
+            .module(Self::MODULE)?
+            .storage(Self::FIELD)?
+            .prefix())
+    }
+    fn key(
+        &self,
+        metadata: &subxt::Metadata,
+    ) -> Result<subxt::sp_core::storage::StorageKey, subxt::MetadataError> {
+        Ok(metadata
+            .module(Self::MODULE)?
+            .storage(Self::FIELD)?
+            .map()?
+            .key(&self.block_hash))
+    }
+}
+
+/// Store extension trait.
+pub trait HeadersStoreExt<T: subxt::Runtime + XGatewayDogecoin> {
+    /// Retrieve the store element.
+    fn headers<'a>(
+        &'a self,
+        block_hash: &'a H256,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'a, Result<Option<BtcHeaderInfo>, subxt::Error>>;
+    /// Iterate over the store element.
+    fn headers_iter(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<Result<subxt::KeyIter<T, HeadersStore<T>>, subxt::Error>>;
+}
+impl<T: subxt::Runtime + XGatewayDogecoin> HeadersStoreExt<T> for subxt::Client<T> {
+    fn headers<'a>(
+        &'a self,
+        block_hash: &'a H256,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'a, Result<Option<BtcHeaderInfo>, subxt::Error>> {
+        let _runtime = core::marker::PhantomData::<T>;
+        Box::pin(async move {
+            self.fetch(
+                &HeadersStore {
+                    _runtime,
+                    block_hash,
+                },
+                hash,
+            )
+            .await
+        })
+    }
+    fn headers_iter(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<Result<subxt::KeyIter<T, HeadersStore<T>>, subxt::Error>> {
+        Box::pin(self.iter(hash))
+    }
+}
+
+/// Headers field of the `XGatewayDogecoin` module.
+// #[derive(Clone, Debug, Eq, PartialEq, Encode, Store)]
+#[derive(Clone, Debug, Eq, PartialEq, Encode)]
+pub struct TxStateStore<'a, T: XGatewayDogecoin> {
+    // #[store(returns = BtcHeaderInfo)]
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+    /// Headers to retrieve the `Option<BtcHeaderInfo>` for.
+    pub tx_hash: &'a H256,
+}
+
+impl<'a, T: XGatewayDogecoin> subxt::Store<T> for TxStateStore<'a, T> {
+    const MODULE: &'static str = MODULE;
+    const FIELD: &'static str = "TxState";
+    type Returns = BtcTxState;
+    fn prefix(
+        metadata: &subxt::Metadata,
+    ) -> Result<subxt::sp_core::storage::StorageKey, subxt::MetadataError> {
+        Ok(metadata
+            .module(Self::MODULE)?
+            .storage(Self::FIELD)?
+            .prefix())
+    }
+    fn key(
+        &self,
+        metadata: &subxt::Metadata,
+    ) -> Result<subxt::sp_core::storage::StorageKey, subxt::MetadataError> {
+        Ok(metadata
+            .module(Self::MODULE)?
+            .storage(Self::FIELD)?
+            .map()?
+            .key(&self.tx_hash))
+    }
+}
+
+/// Store extension trait.
+pub trait TxStateStoreExt<T: subxt::Runtime + XGatewayDogecoin> {
+    /// Retrieve the store element.
+    fn states<'a>(
+        &'a self,
+        tx_hash: &'a H256,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'a, Result<Option<BtcTxState>, subxt::Error>>;
+    /// Iterate over the store element.
+    fn state_iter(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<Result<subxt::KeyIter<T, TxStateStore<T>>, subxt::Error>>;
+}
+impl<T: subxt::Runtime + XGatewayDogecoin> TxStateStoreExt<T> for subxt::Client<T> {
+    fn states<'a>(
+        &'a self,
+        tx_hash: &'a H256,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'a, Result<Option<BtcTxState>, subxt::Error>> {
+        let _runtime = core::marker::PhantomData::<T>;
+        Box::pin(async move { self.fetch(&TxStateStore { _runtime, tx_hash }, hash).await })
+    }
+    fn state_iter(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<Result<subxt::KeyIter<T, TxStateStore<T>>, subxt::Error>> {
+        Box::pin(self.iter(hash))
+    }
+}
+
+/// WithdrawalProposal field of the `XGatewayDogecoin` module.
+// #[derive(Clone, Debug, Eq, PartialEq, Encode, Store)]
+#[derive(Clone, Debug, Eq, PartialEq, Encode)]
+pub struct WithdrawalProposalStore<T: XGatewayDogecoin> {
+    // #[store(returns = BtcWithdrawalProposal<T::AccountId>)]
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+}
+
+impl<T: XGatewayDogecoin> subxt::Store<T> for WithdrawalProposalStore<T> {
+    const MODULE: &'static str = MODULE;
+    const FIELD: &'static str = "WithdrawalProposal";
+    type Returns = BtcWithdrawalProposal<T::AccountId>;
+    fn prefix(
+        metadata: &subxt::Metadata,
+    ) -> Result<subxt::sp_core::storage::StorageKey, subxt::MetadataError> {
+        Ok(metadata
+            .module(Self::MODULE)?
+            .storage(Self::FIELD)?
+            .prefix())
+    }
+    fn key(
+        &self,
+        metadata: &subxt::Metadata,
+    ) -> Result<subxt::sp_core::storage::StorageKey, subxt::MetadataError> {
+        Ok(metadata
+            .module(Self::MODULE)?
+            .storage(Self::FIELD)?
+            .plain()?
+            .key())
+    }
+}
+/// Store extension trait.
+pub trait WithdrawalProposalStoreExt<T: subxt::Runtime + XGatewayDogecoin> {
+    /// Retrieve the store element.
+    fn withdrawal_proposal(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'_, Result<Option<BtcWithdrawalProposal<T::AccountId>>, subxt::Error>>;
+    /// Iterate over the store element.
+    fn withdrawal_proposal_iter(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'_, Result<subxt::KeyIter<T, WithdrawalProposalStore<T>>, subxt::Error>>;
+}
+impl<T: subxt::Runtime + XGatewayDogecoin> WithdrawalProposalStoreExt<T> for subxt::Client<T> {
+    fn withdrawal_proposal(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'_, Result<Option<BtcWithdrawalProposal<T::AccountId>>, subxt::Error>> {
+        let _runtime = core::marker::PhantomData::<T>;
+        Box::pin(async move {
+            self.fetch(&WithdrawalProposalStore { _runtime }, hash)
+                .await
+        })
+    }
+    fn withdrawal_proposal_iter(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'_, Result<subxt::KeyIter<T, WithdrawalProposalStore<T>>, subxt::Error>> {
+        Box::pin(self.iter(hash))
+    }
+}
+
+/// PendingDeposits field of the `XGatewayDogecoin` module.
+#[derive(Clone, Debug, Eq, PartialEq, Encode, Store)]
+pub struct PendingDepositsStore<'a, T: XGatewayDogecoin> {
+    #[store(returns = Vec<BtcDepositCache>)]
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+    /// Headers to retrieve the `Option<BtcHeaderInfo>` for.
+    /// unclaimed deposit info, addr => tx_hash, btc value
+    pub btc_address: &'a [u8],
+}
+
+/*
+impl<'a, T: XGatewayDogecoin> subxt::Store<T> for PendingDepositsStore<'a, T> {
+    const MODULE: &'static str = MODULE;
+    const FIELD: &'static str = "PendingDeposits";
+    type Returns = Vec<BtcDepositCache>;
+    fn prefix(
+        metadata: &subxt::Metadata,
+    ) -> Result<subxt::sp_core::storage::StorageKey, subxt::MetadataError> {
+        Ok(metadata
+            .module(Self::MODULE)?
+            .storage(Self::FIELD)?
+            .prefix())
+    }
+    fn key(
+        &self,
+        metadata: &subxt::Metadata,
+    ) -> Result<subxt::sp_core::storage::StorageKey, subxt::MetadataError> {
+        Ok(metadata
+            .module(Self::MODULE)?
+            .storage(Self::FIELD)?
+            .map()?
+            .key(&self.btc_address))
+    }
+}
+
+/// Store extension trait.
+pub trait PendingDepositsStoreExt<T: subxt::Runtime + XGatewayDogecoin> {
+    /// Retrieve the store element.
+    fn pending_deposits<'a>(
+        &'a self,
+        btc_address: &'a [u8],
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'a, Result<Vec<BtcDepositCache>, subxt::Error>>;
+    /// Iterate over the store element.
+    fn pending_deposits_iter(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'_, Result<subxt::KeyIter<T, PendingDepositsStore<T>>, subxt::Error>>;
+}
+impl<T: subxt::Runtime + XGatewayDogecoin> PendingDepositsStoreExt<T> for subxt::Client<T> {
+    fn pending_deposits<'a>(
+        &'a self,
+        btc_address: &'a [u8],
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'a, Result<Vec<BtcDepositCache>, subxt::Error>> {
+        let _runtime = core::marker::PhantomData::<T>;
+        Box::pin(async move {
+            self.fetch_or_default(
+                &PendingDepositsStore {
+                    _runtime,
+                    btc_address,
+                },
+                hash,
+            )
+            .await
+        })
+    }
+    fn pending_deposits_iter(
+        &self,
+        hash: Option<T::Hash>,
+    ) -> BoxFuture<'_, Result<subxt::KeyIter<T, PendingDepositsStore<T>>, subxt::Error>> {
+        Box::pin(self.iter(hash))
+    }
+}
+*/
+
+#[derive(PartialEq, Clone, Debug, Default, Encode, Decode)]
+pub struct BtcDepositCache {
+    pub txid: H256,
+    pub balance: u64,
+}
+
+/// GenesisInfoStore field of the `XGatewayDogecoin` module.
+#[derive(Clone, Debug, Eq, PartialEq, Encode, Store)]
+pub struct GenesisInfoStore<T: XGatewayDogecoin> {
+    #[store(returns = (BtcBlockHeader, u32))]
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+}
+
+// ============================================================================
+// Call
+// ============================================================================
+
+/// Arguments for push Dogecoin block header
+#[derive(Clone, Debug, Eq, PartialEq, Encode, Call)]
+pub struct PushHeaderCall<'a, T: XGatewayDogecoin> {
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+    /// Serialized btc header.
+    pub header: &'a [u8],
+}
+
+/// Arguments for push Dogecoin transaction
+#[derive(Clone, Debug, Eq, PartialEq, Encode, Call)]
+pub struct PushTransactionCall<'a, T: XGatewayDogecoin> {
+    /// Runtime marker.
+    pub _runtime: PhantomData<T>,
+    /// Serialized btc transaction.
+    pub tx: &'a [u8],
+    ///
+    pub relayed_info: &'a BtcRelayedTxInfo,
+    /// Serialized btc transaction.
+    pub prev_tx: &'a Option<Vec<u8>>,
+}
+
+#[derive(Clone, Debug, Eq, PartialEq, Encode, Decode)]
+pub struct BtcRelayedTxInfo {
+    pub block_hash: H256,
+    pub merkle_proof: PartialMerkleTree,
+}
+
+// ============================================================================
+// Event
+// ============================================================================
+
+/// Push header event.
+// #[derive(Clone, Debug, Eq, PartialEq, Decode, Event)]
+#[derive(Clone, Debug, Eq, PartialEq, Decode)]
+pub struct PushHeaderEvent<T: XGatewayDogecoin> {
+    pub _runtime: PhantomData<T>,
+    /// Dogecoin block hash.
+    pub block_hash: H256,
+}
+
+impl<T: XGatewayDogecoin> subxt::Event<T> for PushHeaderEvent<T> {
+    const MODULE: &'static str = MODULE;
+    const EVENT: &'static str = "HeaderInserted";
+}
+/// Event extension trait.
+pub trait PushHeaderEventExt<T: XGatewayDogecoin> {
+    /// Retrieves the event.
+    fn push_header(&self) -> Result<Option<PushHeaderEvent<T>>, codec::Error>;
+}
+impl<T: XGatewayDogecoin> PushHeaderEventExt<T> for subxt::ExtrinsicSuccess<T> {
+    fn push_header(&self) -> Result<Option<PushHeaderEvent<T>>, codec::Error> {
+        self.find_event()
+    }
+}
+
+/// Push transaction event.
+// #[derive(Clone, Debug, Eq, PartialEq, Decode, Event)]
+#[derive(Clone, Debug, Eq, PartialEq, Decode)]
+pub struct PushTransactionEvent<T: XGatewayDogecoin> {
+    pub _runtime: PhantomData<T>,
+    /// Dogecoin transaction hash.
+    pub tx_hash: H256,
+    /// Dogecoin block hash.
+    pub block_hash: H256,
+    /// Dogecoin transaction state (result + tx_type).
+    pub tx_state: BtcTxState,
+}
+
+impl<T: XGatewayDogecoin> subxt::Event<T> for PushTransactionEvent<T> {
+    const MODULE: &'static str = MODULE;
+    const EVENT: &'static str = "TxProcessed";
+}
+/// Event extension trait.
+pub trait PushTransactionEventExt<T: XGatewayDogecoin> {
+    /// Retrieves the event.
+    fn push_transaction(&self) -> Result<Option<PushTransactionEvent<T>>, codec::Error>;
+}
+impl<T: XGatewayDogecoin> PushTransactionEventExt<T> for subxt::ExtrinsicSuccess<T> {
+    fn push_transaction(&self) -> Result<Option<PushTransactionEvent<T>>, codec::Error> {
+        self.find_event()
+    }
+}

@@ -1,0 +1,535 @@
+2021-06-22 09:54:33 INFO - ================================================================================
+2021-06-22 09:54:33 INFO - Release Version:   2.0.8-1
+2021-06-22 09:54:33 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 09:54:33 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 09:54:33 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 09:54:33 INFO - ================================================================================
+2021-06-22 09:54:33 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 09:54:33 INFO - Bitcoin Block Waiting Interval: [120 seconds]
+2021-06-22 09:54:33 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 09:54:33 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 09:54:33 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 09:54:33 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 09:54:33 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 09:54:33 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 09:54:33 INFO - [Service|new] Connecting Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 09:54:33 INFO - [Service|new] Connected Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 09:54:33 INFO - [ChainX|btc_genesis_info] BTC Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 09:54:33 INFO - [ChainX|btc_confirmed_index] Height #2005819, Hash: 0x000000000000003f3f10bdb25ad0bf8879f0756b20220db786fe6dfa75b7ab41
+2021-06-22 09:54:33 INFO - [ChainX|btc_best_index] Height #2005822, Hash: 0x000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428
+2021-06-22 09:54:33 INFO - [Service|new] Confirmed Height: 2005819, Best Height: 2005822
+2021-06-22 09:54:33 INFO - [Service|new] Fetching BTC block hashes (#2005819-#2005822) from ChainX network
+2021-06-22 09:54:33 INFO - [ChainX|btc_block_hash_for] Height #2005819, Hashes: [0x000000000000003f3f10bdb25ad0bf8879f0756b20220db786fe6dfa75b7ab41]
+2021-06-22 09:54:33 INFO - [ChainX|btc_block_hash_for] Height #2005820, Hashes: [0x000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34]
+2021-06-22 09:54:33 INFO - [ChainX|btc_block_hash_for] Height #2005821, Hashes: [0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7]
+2021-06-22 09:54:33 INFO - [ChainX|btc_block_hash_for] Height #2005822, Hashes: [0x000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428]
+2021-06-22 09:54:33 INFO - [Service|new] Fetching BTC blocks (#2005819-#2005822) from bitcoin network
+2021-06-22 09:54:33 DEBUG - [Bitcoin|block_hash] Height: 2005819, Hash: 000000000000003f3f10bdb25ad0bf8879f0756b20220db786fe6dfa75b7ab41
+2021-06-22 09:54:34 DEBUG - [Bitcoin|block] Hash: 000000000000003f3f10bdb25ad0bf8879f0756b20220db786fe6dfa75b7ab41, Tx size: 7
+2021-06-22 09:54:34 INFO - [Bitcoin|block_by_height] Block #2005819 (000000000000003f3f10bdb25ad0bf8879f0756b20220db786fe6dfa75b7ab41), Tx size: 7
+2021-06-22 09:54:34 DEBUG - [Bitcoin|block_hash] Height: 2005820, Hash: 000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34
+2021-06-22 09:54:34 DEBUG - [Bitcoin|block] Hash: 000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34, Tx size: 11
+2021-06-22 09:54:34 INFO - [Bitcoin|block_by_height] Block #2005820 (000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34), Tx size: 11
+2021-06-22 09:54:34 DEBUG - [Bitcoin|block_hash] Height: 2005821, Hash: 000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7
+2021-06-22 09:54:34 DEBUG - [Bitcoin|block] Hash: 000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7, Tx size: 1
+2021-06-22 09:54:34 INFO - [Bitcoin|block_by_height] Block #2005821 (000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7), Tx size: 1
+2021-06-22 09:54:34 DEBUG - [Bitcoin|block_hash] Height: 2005822, Hash: 000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428
+2021-06-22 09:54:34 DEBUG - [Bitcoin|block] Hash: 000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428, Tx size: 25
+2021-06-22 09:54:34 INFO - [Bitcoin|block_by_height] Block #2005822 (000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428), Tx size: 25
+2021-06-22 09:54:34 INFO - [Service|new] BTC Blocks: [(2005819, 0x000000000000003f3f10bdb25ad0bf8879f0756b20220db786fe6dfa75b7ab41), (2005820, 0x000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34), (2005821, 0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7), (2005822, 0x000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428)]
+2021-06-22 09:54:34 INFO - [Service|relay] Start to relay the Bitcoin block into the ChainX network, Confirmed X-BTC Block #2005819, Current X-BTC Block #2005822
+2021-06-22 09:54:34 INFO - [Service|push_xbtc_transaction] Push Transactions Of Confirmed Block Hash: 0x000000000000003f3f10bdb25ad0bf8879f0756b20220db786fe6dfa75b7ab41
+2021-06-22 09:54:34 INFO - [Service|run] Relay to the latest Block #2005823
+2021-06-22 09:54:34 INFO - [Service|run] Waiting for next BTC Block...
+2021-06-22 10:06:17 INFO - ================================================================================
+2021-06-22 10:06:17 INFO - Release Version:   2.0.8-1
+2021-06-22 10:06:17 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 10:06:17 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 10:06:17 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 10:06:17 INFO - ================================================================================
+2021-06-22 10:06:17 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 10:06:17 INFO - Bitcoin Block Waiting Interval: [120 seconds]
+2021-06-22 10:06:17 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 10:06:17 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 10:06:17 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 10:06:17 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 10:06:17 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 10:06:17 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 10:06:17 INFO - [Service|new] Connecting Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 10:06:17 INFO - [Service|new] Connected Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 10:06:17 INFO - [ChainX|btc_genesis_info] BTC Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 10:06:17 INFO - [ChainX|btc_confirmed_index] Height #2005820, Hash: 0x000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34
+2021-06-22 10:06:17 INFO - [ChainX|btc_best_index] Height #2005823, Hash: 0x000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432
+2021-06-22 10:06:17 INFO - [Service|new] Confirmed Height: 2005820, Best Height: 2005823
+2021-06-22 10:06:17 INFO - [Service|new] Fetching BTC block hashes (#2005820-#2005823) from ChainX network
+2021-06-22 10:06:17 INFO - [ChainX|btc_block_hash_for] Height #2005820, Hashes: [0x000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34]
+2021-06-22 10:06:17 INFO - [ChainX|btc_block_hash_for] Height #2005821, Hashes: [0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7]
+2021-06-22 10:06:18 INFO - [ChainX|btc_block_hash_for] Height #2005822, Hashes: [0x000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428]
+2021-06-22 10:06:18 INFO - [ChainX|btc_block_hash_for] Height #2005823, Hashes: [0x000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432]
+2021-06-22 10:06:18 INFO - [Service|new] Fetching BTC blocks (#2005820-#2005823) from bitcoin network
+2021-06-22 10:06:18 DEBUG - [Bitcoin|block_hash] Height: 2005820, Hash: 000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34
+2021-06-22 10:06:18 DEBUG - [Bitcoin|block] Hash: 000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34, Tx size: 11
+2021-06-22 10:06:18 INFO - [Bitcoin|block_by_height] Block #2005820 (000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34), Tx size: 11
+2021-06-22 10:06:18 DEBUG - [Bitcoin|block_hash] Height: 2005821, Hash: 000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7
+2021-06-22 10:06:18 DEBUG - [Bitcoin|block] Hash: 000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7, Tx size: 1
+2021-06-22 10:06:18 INFO - [Bitcoin|block_by_height] Block #2005821 (000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7), Tx size: 1
+2021-06-22 10:06:18 DEBUG - [Bitcoin|block_hash] Height: 2005822, Hash: 000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428
+2021-06-22 10:06:18 DEBUG - [Bitcoin|block] Hash: 000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428, Tx size: 25
+2021-06-22 10:06:18 INFO - [Bitcoin|block_by_height] Block #2005822 (000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428), Tx size: 25
+2021-06-22 10:06:18 DEBUG - [Bitcoin|block_hash] Height: 2005823, Hash: 000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432
+2021-06-22 10:06:18 DEBUG - [Bitcoin|block] Hash: 000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432, Tx size: 30
+2021-06-22 10:06:18 INFO - [Bitcoin|block_by_height] Block #2005823 (000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432), Tx size: 30
+2021-06-22 10:06:18 INFO - [Service|new] BTC Blocks: [(2005820, 0x000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34), (2005821, 0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7), (2005822, 0x000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428), (2005823, 0x000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432)]
+2021-06-22 10:06:18 INFO - [Service|relay] Start to relay the Bitcoin block into the ChainX network, Confirmed X-BTC Block #2005820, Current X-BTC Block #2005823
+2021-06-22 10:06:18 INFO - [Service|push_xbtc_transaction] Push Transactions Of Confirmed Block Hash: 0x000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34
+2021-06-22 10:13:53 INFO - ================================================================================
+2021-06-22 10:13:53 INFO - Release Version:   2.0.8-1
+2021-06-22 10:13:53 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 10:13:53 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 10:13:53 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 10:13:53 INFO - ================================================================================
+2021-06-22 10:13:53 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 10:13:53 INFO - Bitcoin Block Waiting Interval: [120 seconds]
+2021-06-22 10:13:53 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 10:13:53 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 10:13:53 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 10:13:53 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 10:13:53 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 10:13:53 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 10:13:53 INFO - [Service|new] Connecting Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 10:13:53 INFO - [Service|new] Connected Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 10:13:53 INFO - [ChainX|btc_genesis_info] BTC Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 10:13:53 INFO - [ChainX|btc_confirmed_index] Height #2005820, Hash: 0x000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34
+2021-06-22 10:13:53 INFO - [ChainX|btc_best_index] Height #2005823, Hash: 0x000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432
+2021-06-22 10:13:53 INFO - [Service|new] Confirmed Height: 2005820, Best Height: 2005823
+2021-06-22 10:13:53 INFO - [Service|new] Fetching BTC block hashes (#2005820-#2005823) from ChainX network
+2021-06-22 10:13:53 INFO - [ChainX|btc_block_hash_for] Height #2005820, Hashes: [0x000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34]
+2021-06-22 10:13:53 INFO - [ChainX|btc_block_hash_for] Height #2005821, Hashes: [0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7]
+2021-06-22 10:13:53 INFO - [ChainX|btc_block_hash_for] Height #2005822, Hashes: [0x000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428]
+2021-06-22 10:13:53 INFO - [ChainX|btc_block_hash_for] Height #2005823, Hashes: [0x000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432]
+2021-06-22 10:13:53 INFO - [Service|new] Fetching BTC blocks (#2005820-#2005823) from bitcoin network
+2021-06-22 10:13:53 DEBUG - [Bitcoin|block_hash] Height: 2005820, Hash: 000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34
+2021-06-22 10:13:53 DEBUG - [Bitcoin|block] Hash: 000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34, Tx size: 11
+2021-06-22 10:13:53 INFO - [Bitcoin|block_by_height] Block #2005820 (000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34), Tx size: 11
+2021-06-22 10:13:53 DEBUG - [Bitcoin|block_hash] Height: 2005821, Hash: 000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7
+2021-06-22 10:13:53 DEBUG - [Bitcoin|block] Hash: 000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7, Tx size: 1
+2021-06-22 10:13:53 INFO - [Bitcoin|block_by_height] Block #2005821 (000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7), Tx size: 1
+2021-06-22 10:13:53 DEBUG - [Bitcoin|block_hash] Height: 2005822, Hash: 000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428
+2021-06-22 10:13:53 DEBUG - [Bitcoin|block] Hash: 000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428, Tx size: 25
+2021-06-22 10:13:53 INFO - [Bitcoin|block_by_height] Block #2005822 (000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428), Tx size: 25
+2021-06-22 10:13:53 DEBUG - [Bitcoin|block_hash] Height: 2005823, Hash: 000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432
+2021-06-22 10:13:53 DEBUG - [Bitcoin|block] Hash: 000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432, Tx size: 30
+2021-06-22 10:13:53 INFO - [Bitcoin|block_by_height] Block #2005823 (000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432), Tx size: 30
+2021-06-22 10:13:53 INFO - [Service|new] BTC Blocks: [(2005820, 0x000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34), (2005821, 0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7), (2005822, 0x000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428), (2005823, 0x000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432)]
+2021-06-22 10:13:53 INFO - [Service|relay] Start to relay the Bitcoin block into the ChainX network, Confirmed X-BTC Block #2005820, Current X-BTC Block #2005823
+2021-06-22 10:13:53 INFO - [Service|push_xbtc_transaction] Push Transactions Of Confirmed Block Hash: 0x000000000000000aad50bbc293fbdb253afad22c603508c9cf477f4a31d3cb34
+2021-06-22 10:13:54 INFO - [Service|run] Relay to the latest Block #2005824
+2021-06-22 10:13:54 INFO - [Service|run] Waiting for next BTC Block...
+2021-06-22 10:27:27 INFO - ================================================================================
+2021-06-22 10:27:27 INFO - Release Version:   2.0.8-1
+2021-06-22 10:27:27 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 10:27:27 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 10:27:27 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 10:27:27 INFO - ================================================================================
+2021-06-22 10:27:27 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 10:27:27 INFO - Bitcoin Block Waiting Interval: [120 seconds]
+2021-06-22 10:27:27 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 10:27:27 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 10:27:27 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 10:27:27 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 10:27:27 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 10:27:27 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 10:27:27 INFO - [Service|new] Connecting Bitcoin node: http://117.51.148.252:8086/
+2021-06-22 10:27:27 INFO - [Service|new] Connected Bitcoin node: http://117.51.148.252:8086/
+2021-06-22 10:27:27 INFO - [ChainX|btc_genesis_info] BTC Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 10:27:27 INFO - [ChainX|btc_confirmed_index] Height #2005821, Hash: 0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7
+2021-06-22 10:27:27 INFO - [ChainX|btc_best_index] Height #2005824, Hash: 0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf
+2021-06-22 10:27:27 INFO - [Service|new] Confirmed Height: 2005821, Best Height: 2005824
+2021-06-22 10:27:27 INFO - [Service|new] Fetching BTC block hashes (#2005821-#2005824) from ChainX network
+2021-06-22 10:27:27 INFO - [ChainX|btc_block_hash_for] Height #2005821, Hashes: [0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7]
+2021-06-22 10:27:27 INFO - [ChainX|btc_block_hash_for] Height #2005822, Hashes: [0x000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428]
+2021-06-22 10:27:27 INFO - [ChainX|btc_block_hash_for] Height #2005823, Hashes: [0x000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432]
+2021-06-22 10:27:27 INFO - [ChainX|btc_block_hash_for] Height #2005824, Hashes: [0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf]
+2021-06-22 10:27:27 INFO - [Service|new] Fetching BTC blocks (#2005821-#2005824) from bitcoin network
+2021-06-22 10:27:53 INFO - ================================================================================
+2021-06-22 10:27:53 INFO - Release Version:   2.0.8-1
+2021-06-22 10:27:53 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 10:27:53 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 10:27:53 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 10:27:53 INFO - ================================================================================
+2021-06-22 10:27:53 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 10:27:53 INFO - Bitcoin Block Waiting Interval: [120 seconds]
+2021-06-22 10:27:53 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 10:27:53 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 10:27:53 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 10:27:53 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 10:27:53 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 10:27:53 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 10:27:53 INFO - [Service|new] Connecting Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 10:27:53 INFO - [Service|new] Connected Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 10:27:53 INFO - [ChainX|btc_genesis_info] BTC Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 10:27:53 INFO - [ChainX|btc_confirmed_index] Height #2005821, Hash: 0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7
+2021-06-22 10:27:53 INFO - [ChainX|btc_best_index] Height #2005824, Hash: 0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf
+2021-06-22 10:27:53 INFO - [Service|new] Confirmed Height: 2005821, Best Height: 2005824
+2021-06-22 10:27:53 INFO - [Service|new] Fetching BTC block hashes (#2005821-#2005824) from ChainX network
+2021-06-22 10:27:53 INFO - [ChainX|btc_block_hash_for] Height #2005821, Hashes: [0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7]
+2021-06-22 10:27:53 INFO - [ChainX|btc_block_hash_for] Height #2005822, Hashes: [0x000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428]
+2021-06-22 10:27:53 INFO - [ChainX|btc_block_hash_for] Height #2005823, Hashes: [0x000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432]
+2021-06-22 10:27:53 INFO - [ChainX|btc_block_hash_for] Height #2005824, Hashes: [0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf]
+2021-06-22 10:27:53 INFO - [Service|new] Fetching BTC blocks (#2005821-#2005824) from bitcoin network
+2021-06-22 10:27:53 DEBUG - [Bitcoin|block_hash] Height: 2005821, Hash: 000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7
+2021-06-22 10:27:53 DEBUG - [Bitcoin|block] Hash: 000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7, Tx size: 1
+2021-06-22 10:27:53 INFO - [Bitcoin|block_by_height] Block #2005821 (000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7), Tx size: 1
+2021-06-22 10:27:53 DEBUG - [Bitcoin|block_hash] Height: 2005822, Hash: 000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428
+2021-06-22 10:27:53 DEBUG - [Bitcoin|block] Hash: 000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428, Tx size: 25
+2021-06-22 10:27:53 INFO - [Bitcoin|block_by_height] Block #2005822 (000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428), Tx size: 25
+2021-06-22 10:27:53 DEBUG - [Bitcoin|block_hash] Height: 2005823, Hash: 000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432
+2021-06-22 10:27:53 DEBUG - [Bitcoin|block] Hash: 000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432, Tx size: 30
+2021-06-22 10:27:53 INFO - [Bitcoin|block_by_height] Block #2005823 (000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432), Tx size: 30
+2021-06-22 10:27:53 DEBUG - [Bitcoin|block_hash] Height: 2005824, Hash: 0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf
+2021-06-22 10:27:53 DEBUG - [Bitcoin|block] Hash: 0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf, Tx size: 38
+2021-06-22 10:27:53 INFO - [Bitcoin|block_by_height] Block #2005824 (0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf), Tx size: 38
+2021-06-22 10:27:53 INFO - [Service|new] BTC Blocks: [(2005821, 0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7), (2005822, 0x000000000000001db1a35893ae8fcc0968e3df469d7bb8c4e0a39148ee92a428), (2005823, 0x000000000000000e7a7e5b803edcec379084fb649a74fe1efbf30590c6593432), (2005824, 0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf)]
+2021-06-22 10:27:53 INFO - [Service|relay] Start to relay the Bitcoin block into the ChainX network, Confirmed X-BTC Block #2005821, Current X-BTC Block #2005824
+2021-06-22 10:27:53 INFO - [Service|push_xbtc_transaction] Push Transactions Of Confirmed Block Hash: 0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7
+2021-06-22 10:27:54 INFO - [Service|push_xbtc_transaction] No xbridge txs in Confirmed Block 0x000000000000000f865ba64d5514aa736bd951343098a4b0449b066872957ba7
+2021-06-22 10:27:54 INFO - [Service|run] Relay to the latest Block #2005825
+2021-06-22 10:27:54 INFO - [Service|run] Waiting for next BTC Block...
+2021-06-22 11:06:35 INFO - ================================================================================
+2021-06-22 11:06:35 INFO - Release Version:   2.0.8-1
+2021-06-22 11:06:35 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 11:06:35 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 11:06:35 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 11:06:35 INFO - ================================================================================
+2021-06-22 11:06:35 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 11:06:35 INFO - Bitcoin Block Waiting Interval: [120 seconds]
+2021-06-22 11:06:35 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 11:06:35 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 11:06:35 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 11:06:35 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 11:06:35 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 11:06:35 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 11:06:35 INFO - [Service|new] Connecting Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 11:06:35 INFO - [Service|new] Connected Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 11:06:35 INFO - [ChainX|chain_genesis_info] Bitcoin Genesis Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 11:06:35 INFO - [ChainX|Bitcoin_confirmed_index] Height #2005824, Hash: 0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf
+2021-06-22 11:06:35 INFO - [ChainX|btc_best_index] Height #2005827, Hash: 0x0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb
+2021-06-22 11:06:35 INFO - [Service|new] Confirmed Height: 2005824, Best Height: 2005827
+2021-06-22 11:06:35 INFO - [Service|new] Fetching BTC block hashes (#2005824-#2005827) from ChainX network
+2021-06-22 11:06:35 INFO - [ChainX|btc_block_hash_for] Height #2005824, Hashes: [0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf]
+2021-06-22 11:06:36 INFO - [ChainX|btc_block_hash_for] Height #2005825, Hashes: [0x0000000000169ba8568f62953232fc706dc0c42f7cbef12db8c2ab785f4fa4ea]
+2021-06-22 11:06:36 INFO - [ChainX|btc_block_hash_for] Height #2005826, Hashes: [0x000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a]
+2021-06-22 11:06:36 INFO - [ChainX|btc_block_hash_for] Height #2005827, Hashes: [0x0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb]
+2021-06-22 11:06:36 INFO - [Service|new] Fetching BTC blocks (#2005824-#2005827) from bitcoin network
+2021-06-22 11:06:36 DEBUG - [Bitcoin|block_hash] Height: 2005824, Hash: 0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf
+2021-06-22 11:06:36 DEBUG - [Bitcoin|block] Hash: 0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf, Tx size: 38
+2021-06-22 11:06:36 INFO - [Bitcoin|block_by_height] Block #2005824 (0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf), Tx size: 38
+2021-06-22 11:06:36 DEBUG - [Bitcoin|block_hash] Height: 2005825, Hash: 0000000000169ba8568f62953232fc706dc0c42f7cbef12db8c2ab785f4fa4ea
+2021-06-22 11:06:36 DEBUG - [Bitcoin|block] Hash: 0000000000169ba8568f62953232fc706dc0c42f7cbef12db8c2ab785f4fa4ea, Tx size: 45
+2021-06-22 11:06:36 INFO - [Bitcoin|block_by_height] Block #2005825 (0000000000169ba8568f62953232fc706dc0c42f7cbef12db8c2ab785f4fa4ea), Tx size: 45
+2021-06-22 11:06:36 DEBUG - [Bitcoin|block_hash] Height: 2005826, Hash: 000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a
+2021-06-22 11:06:36 DEBUG - [Bitcoin|block] Hash: 000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a, Tx size: 11
+2021-06-22 11:06:36 INFO - [Bitcoin|block_by_height] Block #2005826 (000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a), Tx size: 11
+2021-06-22 11:06:36 DEBUG - [Bitcoin|block_hash] Height: 2005827, Hash: 0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb
+2021-06-22 11:06:36 DEBUG - [Bitcoin|block] Hash: 0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb, Tx size: 32
+2021-06-22 11:06:36 INFO - [Bitcoin|block_by_height] Block #2005827 (0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb), Tx size: 32
+2021-06-22 11:06:36 INFO - [Service|new] BTC Blocks: [(2005824, 0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf), (2005825, 0x0000000000169ba8568f62953232fc706dc0c42f7cbef12db8c2ab785f4fa4ea), (2005826, 0x000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a), (2005827, 0x0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb)]
+2021-06-22 11:06:36 INFO - [Service|relay] Start to relay the Bitcoin block into the ChainX network, Confirmed X-BTC Block #2005824, Current X-BTC Block #2005827
+2021-06-22 11:06:36 INFO - [Service|push_xbtc_transaction] Push Transactions Of Confirmed Block Hash: 0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf
+2021-06-22 11:06:38 INFO - ================================================================================
+2021-06-22 11:06:38 INFO - Release Version:   2.0.8-1
+2021-06-22 11:06:38 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 11:06:38 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 11:06:38 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 11:06:38 INFO - ================================================================================
+2021-06-22 11:06:38 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 11:06:38 INFO - Bitcoin Block Waiting Interval: [120 seconds]
+2021-06-22 11:06:38 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 11:06:38 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 11:06:38 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 11:06:39 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 11:06:39 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 11:06:39 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 11:06:39 INFO - [Service|new] Connecting Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 11:06:39 INFO - [Service|new] Connected Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 11:06:39 INFO - [ChainX|chain_genesis_info] Bitcoin Genesis Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 11:06:39 INFO - [ChainX|Bitcoin_confirmed_index] Height #2005824, Hash: 0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf
+2021-06-22 11:06:39 INFO - [ChainX|btc_best_index] Height #2005827, Hash: 0x0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb
+2021-06-22 11:06:39 INFO - [Service|new] Confirmed Height: 2005824, Best Height: 2005827
+2021-06-22 11:06:39 INFO - [Service|new] Fetching BTC block hashes (#2005824-#2005827) from ChainX network
+2021-06-22 11:06:39 INFO - [ChainX|btc_block_hash_for] Height #2005824, Hashes: [0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf]
+2021-06-22 11:06:39 INFO - [ChainX|btc_block_hash_for] Height #2005825, Hashes: [0x0000000000169ba8568f62953232fc706dc0c42f7cbef12db8c2ab785f4fa4ea]
+2021-06-22 11:06:39 INFO - [ChainX|btc_block_hash_for] Height #2005826, Hashes: [0x000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a]
+2021-06-22 11:06:39 INFO - [ChainX|btc_block_hash_for] Height #2005827, Hashes: [0x0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb]
+2021-06-22 11:06:39 INFO - [Service|new] Fetching BTC blocks (#2005824-#2005827) from bitcoin network
+2021-06-22 11:06:39 DEBUG - [Bitcoin|block_hash] Height: 2005824, Hash: 0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf
+2021-06-22 11:06:39 DEBUG - [Bitcoin|block] Hash: 0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf, Tx size: 38
+2021-06-22 11:06:39 INFO - [Bitcoin|block_by_height] Block #2005824 (0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf), Tx size: 38
+2021-06-22 11:06:39 DEBUG - [Bitcoin|block_hash] Height: 2005825, Hash: 0000000000169ba8568f62953232fc706dc0c42f7cbef12db8c2ab785f4fa4ea
+2021-06-22 11:06:39 DEBUG - [Bitcoin|block] Hash: 0000000000169ba8568f62953232fc706dc0c42f7cbef12db8c2ab785f4fa4ea, Tx size: 45
+2021-06-22 11:06:39 INFO - [Bitcoin|block_by_height] Block #2005825 (0000000000169ba8568f62953232fc706dc0c42f7cbef12db8c2ab785f4fa4ea), Tx size: 45
+2021-06-22 11:06:39 DEBUG - [Bitcoin|block_hash] Height: 2005826, Hash: 000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a
+2021-06-22 11:06:39 DEBUG - [Bitcoin|block] Hash: 000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a, Tx size: 11
+2021-06-22 11:06:39 INFO - [Bitcoin|block_by_height] Block #2005826 (000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a), Tx size: 11
+2021-06-22 11:06:39 DEBUG - [Bitcoin|block_hash] Height: 2005827, Hash: 0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb
+2021-06-22 11:06:39 DEBUG - [Bitcoin|block] Hash: 0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb, Tx size: 32
+2021-06-22 11:06:39 INFO - [Bitcoin|block_by_height] Block #2005827 (0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb), Tx size: 32
+2021-06-22 11:06:39 INFO - [Service|new] BTC Blocks: [(2005824, 0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf), (2005825, 0x0000000000169ba8568f62953232fc706dc0c42f7cbef12db8c2ab785f4fa4ea), (2005826, 0x000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a), (2005827, 0x0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb)]
+2021-06-22 11:06:39 INFO - [Service|relay] Start to relay the Bitcoin block into the ChainX network, Confirmed X-BTC Block #2005824, Current X-BTC Block #2005827
+2021-06-22 11:06:39 INFO - [Service|push_xbtc_transaction] Push Transactions Of Confirmed Block Hash: 0x0000000000b1f8fcbd76d9d5e93a52dbbb31e349bbab0a627f3642fc1766d8bf
+2021-06-22 11:06:40 DEBUG - [Bitcoin|block_hash] Height: 2005828, Hash: 0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc
+2021-06-22 11:06:40 DEBUG - [Bitcoin|block] Hash: 0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc, Tx size: 1
+2021-06-22 11:06:40 INFO - [Bitcoin|block_by_height] Block #2005828 (0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc), Tx size: 1
+2021-06-22 11:06:40 INFO - [Service|push_xbtc_header] Block Hash: 0x0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc
+2021-06-22 11:06:40 INFO - [ChainX|push_btc_header] Btc Header Hash: 0x0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc
+2021-06-22 11:06:40 INFO - [ChainX|push_btc_header]  Extrinsic Hash: 0xfc82781e74bc88b5f1a5649204df423675fab0abec9a488fbbbf9725419c9960
+2021-06-22 11:19:45 INFO - ================================================================================
+2021-06-22 11:19:45 INFO - Release Version:   2.0.8-1
+2021-06-22 11:19:45 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 11:19:45 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 11:19:45 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 11:19:45 INFO - ================================================================================
+2021-06-22 11:19:45 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 11:19:45 INFO - Bitcoin Block Waiting Interval: [120 seconds]
+2021-06-22 11:19:45 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 11:19:45 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 11:19:45 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 11:19:45 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 11:19:45 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 11:19:45 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 11:19:45 INFO - [Service|new] Connecting Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 11:19:45 INFO - [Service|new] Connected Bitcoin node: http://auth:bitcoin-b2dd077@115.29.163.193:18332/
+2021-06-22 11:19:45 INFO - [ChainX|chain_genesis_info] Bitcoin Genesis Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 11:19:45 INFO - [ChainX|Bitcoin_confirmed_index] Height #2005826, Hash: 0x000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a
+2021-06-22 11:19:45 INFO - [ChainX|Bitcoin_best_index] Height #2005829, Hash: 0x00000000000000226549e4fdd75837b42c377e9dec296614bdd39ddfd857d1fa
+2021-06-22 11:19:45 INFO - [Service|new] Confirmed Height: 2005826, Best Height: 2005829
+2021-06-22 11:19:45 INFO - [Service|new] Fetching Bitcoin block hashes (#2005826-#2005829) from ChainX network
+2021-06-22 11:19:45 INFO - [ChainX|Bitcoin_block_hash_for] Height #2005826, Hashes: [0x000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a]
+2021-06-22 11:19:45 INFO - [ChainX|Bitcoin_block_hash_for] Height #2005827, Hashes: [0x0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb]
+2021-06-22 11:19:45 INFO - [ChainX|Bitcoin_block_hash_for] Height #2005828, Hashes: [0x0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc]
+2021-06-22 11:19:45 INFO - [ChainX|Bitcoin_block_hash_for] Height #2005829, Hashes: [0x00000000000000226549e4fdd75837b42c377e9dec296614bdd39ddfd857d1fa]
+2021-06-22 11:19:45 INFO - [Service|new] Fetching BTC blocks (#2005826-#2005829) from Bitcoin network
+2021-06-22 11:19:45 DEBUG - [Bitcoin|block_hash] Height: 2005826, Hash: 000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a
+2021-06-22 11:19:45 DEBUG - [Bitcoin|block] Hash: 000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a, Tx size: 11
+2021-06-22 11:19:45 INFO - [Bitcoin|block_by_height] Block #2005826 (000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a), Tx size: 11
+2021-06-22 11:19:45 DEBUG - [Bitcoin|block_hash] Height: 2005827, Hash: 0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb
+2021-06-22 11:19:45 DEBUG - [Bitcoin|block] Hash: 0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb, Tx size: 32
+2021-06-22 11:19:45 INFO - [Bitcoin|block_by_height] Block #2005827 (0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb), Tx size: 32
+2021-06-22 11:19:45 DEBUG - [Bitcoin|block_hash] Height: 2005828, Hash: 0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc
+2021-06-22 11:19:45 DEBUG - [Bitcoin|block] Hash: 0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc, Tx size: 1
+2021-06-22 11:19:45 INFO - [Bitcoin|block_by_height] Block #2005828 (0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc), Tx size: 1
+2021-06-22 11:19:45 DEBUG - [Bitcoin|block_hash] Height: 2005829, Hash: 00000000000000226549e4fdd75837b42c377e9dec296614bdd39ddfd857d1fa
+2021-06-22 11:19:45 DEBUG - [Bitcoin|block] Hash: 00000000000000226549e4fdd75837b42c377e9dec296614bdd39ddfd857d1fa, Tx size: 45
+2021-06-22 11:19:45 INFO - [Bitcoin|block_by_height] Block #2005829 (00000000000000226549e4fdd75837b42c377e9dec296614bdd39ddfd857d1fa), Tx size: 45
+2021-06-22 11:19:45 INFO - [Service|new] Bitcoin Blocks: [(2005826, 0x000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a), (2005827, 0x0000000000000039ba5daa7f98b6506d38473ce21f951bcfa03e6123fcdd8deb), (2005828, 0x0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc), (2005829, 0x00000000000000226549e4fdd75837b42c377e9dec296614bdd39ddfd857d1fa)]
+2021-06-22 11:19:45 INFO - [Service|relay] Start to relay the Bitcoin block into the ChainX network, Confirmed X-BTC Block #2005826, Current X-BTC Block #2005829
+2021-06-22 11:19:45 INFO - [Service|push_xbtc_transaction] Push Transactions Of Confirmed Block Hash: 0x000000000000002decfd9cce88f4e0eedfec00c81e07a87cd66fc9f6043c996a
+2021-06-22 11:19:46 INFO - [Service|run] Relay to the latest Block #2005830
+2021-06-22 11:19:46 INFO - [Service|run] Waiting for next BTC Block...
+2021-06-22 11:43:44 INFO - ================================================================================
+2021-06-22 11:43:44 INFO - Release Version:   2.0.8-1
+2021-06-22 11:43:44 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 11:43:44 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 11:43:44 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 11:43:44 INFO - ================================================================================
+2021-06-22 11:43:44 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 11:43:44 INFO - Dogecoin Block Waiting Interval: [120 seconds]
+2021-06-22 11:43:44 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 11:43:44 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 11:43:44 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 11:43:44 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 11:43:44 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 11:43:44 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 11:43:44 INFO - [Service|new] Connecting Dogecoin node: http://auth:dogecoin-1c2s4d@116.85.70.172:18337/
+2021-06-22 11:43:44 INFO - [Service|new] Connected Dogecoin node: http://auth:dogecoin-1c2s4d@116.85.70.172:18337/
+2021-06-22 11:43:44 INFO - [ChainX|chain_genesis_info] Dogecoin Genesis Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 11:43:44 INFO - [ChainX|Dogecoin_confirmed_index] Height #2005828, Hash: 0x0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc
+2021-06-22 11:43:44 INFO - [ChainX|Dogecoin_best_index] Height #2005831, Hash: 0x00000000000000140c559c421df9adb035fb1354e147b67c3d4b10bd368f1e3d
+2021-06-22 11:43:44 INFO - [Service|new] Confirmed Height: 2005828, Best Height: 2005831
+2021-06-22 11:43:44 INFO - [Service|new] Fetching Dogecoin block hashes (#2005828-#2005831) from ChainX network
+2021-06-22 11:43:44 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005828, Hashes: [0x0000000000000005a2f686cf4d0e6a584b0f5adba4c8e98ed5b7c0bad947f7fc]
+2021-06-22 11:43:44 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005829, Hashes: [0x00000000000000226549e4fdd75837b42c377e9dec296614bdd39ddfd857d1fa]
+2021-06-22 11:43:44 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005830, Hashes: [0x000000000000002c5c078c02dd58433138421d2681e761c8491ddf403b4ca0ca]
+2021-06-22 11:43:44 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005831, Hashes: [0x00000000000000140c559c421df9adb035fb1354e147b67c3d4b10bd368f1e3d]
+2021-06-22 11:43:44 INFO - [Service|new] Fetching Dogecoin blocks (#2005828-#2005831) from Dogecoin network
+2021-06-22 11:43:44 DEBUG - [Bitcoin|block_hash] Height: 2005828, Hash: e0a374112c6991ad8d95dd5c0231d25bd043a15297088238d469466ff9e124ac
+2021-06-22 11:57:08 INFO - ================================================================================
+2021-06-22 11:57:08 INFO - Release Version:   2.0.8-1
+2021-06-22 11:57:08 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 11:57:08 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 11:57:08 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 11:57:08 INFO - ================================================================================
+2021-06-22 11:57:08 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 11:57:08 INFO - Dogecoin Block Waiting Interval: [120 seconds]
+2021-06-22 11:57:08 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 11:57:08 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 11:57:08 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 11:57:08 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 11:57:08 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 11:57:08 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 11:57:08 INFO - [Service|new] Connecting Dogecoin node: http://auth:dogecoin-1c2s4d@116.85.70.172:18337/
+2021-06-22 11:57:08 INFO - [Service|new] Connected Dogecoin node: http://auth:dogecoin-1c2s4d@116.85.70.172:18337/
+2021-06-22 11:57:08 INFO - [ChainX|chain_genesis_info] Dogecoin Genesis Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 11:57:08 INFO - [ChainX|Dogecoin_confirmed_index] Height #2005829, Hash: 0x00000000000000226549e4fdd75837b42c377e9dec296614bdd39ddfd857d1fa
+2021-06-22 11:57:08 INFO - [ChainX|Dogecoin_best_index] Height #2005832, Hash: 0x00000000000000217e6dcfbfa992ca318d8bc127874c9fcd351bdb1f38de8962
+2021-06-22 11:57:08 INFO - [Service|new] Confirmed Height: 2005829, Best Height: 2005832
+2021-06-22 11:57:08 INFO - [Service|new] Fetching Dogecoin block hashes (#2005829-#2005832) from ChainX network
+2021-06-22 11:57:08 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005829, Hashes: [0x00000000000000226549e4fdd75837b42c377e9dec296614bdd39ddfd857d1fa]
+2021-06-22 11:57:08 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005830, Hashes: [0x000000000000002c5c078c02dd58433138421d2681e761c8491ddf403b4ca0ca]
+2021-06-22 11:57:08 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005831, Hashes: [0x00000000000000140c559c421df9adb035fb1354e147b67c3d4b10bd368f1e3d]
+2021-06-22 11:57:09 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005832, Hashes: [0x00000000000000217e6dcfbfa992ca318d8bc127874c9fcd351bdb1f38de8962]
+2021-06-22 11:57:09 INFO - [Service|new] Fetching Dogecoin blocks (#2005829-#2005832) from Dogecoin network
+2021-06-22 11:57:09 DEBUG - [Bitcoin|block_hash] Height: 2005829, Hash: 1a04b4c599090b04a3ce391b0790e8e0fc385d3f5320f429c9fc74850c8a5cac
+2021-06-22 11:57:09 DEBUG - [Bitcoin|block] Hash: 1a04b4c599090b04a3ce391b0790e8e0fc385d3f5320f429c9fc74850c8a5cac, Tx size: 1
+2021-06-22 11:57:09 INFO - [Bitcoin|block_by_height] Block #2005829 (1a04b4c599090b04a3ce391b0790e8e0fc385d3f5320f429c9fc74850c8a5cac), Tx size: 1
+2021-06-22 11:57:09 WARN - [Service|new] The block #2005829 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005829 hash in ChainX ([0x00000000000000226549e4fdd75837b42c377e9dec296614bdd39ddfd857d1fa]), block #2005829 hash in Dogecoin (0x1a04b4c599090b04a3ce391b0790e8e0fc385d3f5320f429c9fc74850c8a5cac)
+2021-06-22 11:57:09 DEBUG - [Bitcoin|block_hash] Height: 2005830, Hash: c30f62c0da4fcff390717e4343bea50d8d460d1eefe07737d9bc0ab77876bc43
+2021-06-22 11:57:09 DEBUG - [Bitcoin|block] Hash: c30f62c0da4fcff390717e4343bea50d8d460d1eefe07737d9bc0ab77876bc43, Tx size: 1
+2021-06-22 11:57:09 INFO - [Bitcoin|block_by_height] Block #2005830 (c30f62c0da4fcff390717e4343bea50d8d460d1eefe07737d9bc0ab77876bc43), Tx size: 1
+2021-06-22 11:57:09 WARN - [Service|new] The block #2005830 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005830 hash in ChainX ([0x000000000000002c5c078c02dd58433138421d2681e761c8491ddf403b4ca0ca]), block #2005830 hash in Dogecoin (0xc30f62c0da4fcff390717e4343bea50d8d460d1eefe07737d9bc0ab77876bc43)
+2021-06-22 11:57:09 DEBUG - [Bitcoin|block_hash] Height: 2005831, Hash: 75418bbf757155628a57647a610215c32893f35a0872618028fdd09348bbed50
+2021-06-22 11:57:09 DEBUG - [Bitcoin|block] Hash: 75418bbf757155628a57647a610215c32893f35a0872618028fdd09348bbed50, Tx size: 1
+2021-06-22 11:57:09 INFO - [Bitcoin|block_by_height] Block #2005831 (75418bbf757155628a57647a610215c32893f35a0872618028fdd09348bbed50), Tx size: 1
+2021-06-22 11:57:09 WARN - [Service|new] The block #2005831 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005831 hash in ChainX ([0x00000000000000140c559c421df9adb035fb1354e147b67c3d4b10bd368f1e3d]), block #2005831 hash in Dogecoin (0x75418bbf757155628a57647a610215c32893f35a0872618028fdd09348bbed50)
+2021-06-22 11:57:09 DEBUG - [Bitcoin|block_hash] Height: 2005832, Hash: ed4ded29d6967e02b8d4bcbf78c220a6f25a649e0a7bd51bf663161e39d024d3
+2021-06-22 11:57:09 DEBUG - [Bitcoin|block] Hash: ed4ded29d6967e02b8d4bcbf78c220a6f25a649e0a7bd51bf663161e39d024d3, Tx size: 1
+2021-06-22 11:57:09 INFO - [Bitcoin|block_by_height] Block #2005832 (ed4ded29d6967e02b8d4bcbf78c220a6f25a649e0a7bd51bf663161e39d024d3), Tx size: 1
+2021-06-22 11:57:09 WARN - [Service|new] The block #2005832 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005832 hash in ChainX ([0x00000000000000217e6dcfbfa992ca318d8bc127874c9fcd351bdb1f38de8962]), block #2005832 hash in Dogecoin (0xed4ded29d6967e02b8d4bcbf78c220a6f25a649e0a7bd51bf663161e39d024d3)
+2021-06-22 11:57:09 INFO - [Service|new] Dogecoin Blocks: []
+2021-06-22 11:57:09 INFO - [Service|relay] Start to relay the Dogecoin block into the ChainX network, Confirmed Block #2005829, Current Block #2005832
+2021-06-22 14:51:41 INFO - ================================================================================
+2021-06-22 14:51:41 INFO - Release Version:   2.0.8-1
+2021-06-22 14:51:41 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 14:51:41 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 14:51:41 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 14:51:41 INFO - ================================================================================
+2021-06-22 14:51:41 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 14:51:41 INFO - Dogecoin Block Waiting Interval: [120 seconds]
+2021-06-22 14:51:41 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 14:51:41 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 14:51:41 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 14:51:41 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 14:51:41 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 14:51:41 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 14:51:41 INFO - [Service|new] Connecting Dogecoin node: http://auth:dogecoin-1c2s4d@116.85.70.172:18337/
+2021-06-22 14:51:41 INFO - [Service|new] Connected Dogecoin node: http://auth:dogecoin-1c2s4d@116.85.70.172:18337/
+2021-06-22 14:51:41 INFO - [ChainX|chain_genesis_info] Dogecoin Genesis Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 14:51:41 INFO - [ChainX|Dogecoin_confirmed_index] Height #2005847, Hash: 0x000000000000000577dcfa467da975343b4b3f9275c60c8538ad1c6b8f8e4baa
+2021-06-22 14:51:41 INFO - [ChainX|Dogecoin_best_index] Height #2005850, Hash: 0x00000000000000058dd81eab7908968d5ad2ba974f70b5f75884f7c7e50937d3
+2021-06-22 14:51:41 INFO - [Service|new] Confirmed Height: 2005847, Best Height: 2005850
+2021-06-22 14:51:41 INFO - [Service|new] Fetching Dogecoin block hashes (#2005847-#2005850) from ChainX network
+2021-06-22 14:51:41 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005847, Hashes: [0x000000000000000577dcfa467da975343b4b3f9275c60c8538ad1c6b8f8e4baa]
+2021-06-22 14:51:41 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005848, Hashes: [0x0000000000000014f8e4e1c8ae7deb4c3cd9f55764fbd9404047793a3337045e]
+2021-06-22 14:51:41 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005849, Hashes: [0x00000000000000235fbf42753e73b654ae7914d661c9e6acf5340a5da5afb8f9]
+2021-06-22 14:51:41 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005850, Hashes: [0x00000000000000058dd81eab7908968d5ad2ba974f70b5f75884f7c7e50937d3]
+2021-06-22 14:51:41 INFO - [Service|new] Fetching Dogecoin blocks (#2005847-#2005850) from Dogecoin network
+2021-06-22 14:51:41 DEBUG - [Bitcoin|block_hash] Height: 2005847, Hash: fa3c7da0e1ecc5ab3df86bd71e8abc7f0747e3816047fd2c7140d78549c5d3ec
+2021-06-22 14:51:41 DEBUG - [Bitcoin|block] Hash: fa3c7da0e1ecc5ab3df86bd71e8abc7f0747e3816047fd2c7140d78549c5d3ec, Tx size: 1
+2021-06-22 14:51:41 INFO - [Bitcoin|block_by_height] Block #2005847 (fa3c7da0e1ecc5ab3df86bd71e8abc7f0747e3816047fd2c7140d78549c5d3ec), Tx size: 1
+2021-06-22 14:51:41 WARN - [Service|new] The block #2005847 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005847 hash in ChainX ([0x000000000000000577dcfa467da975343b4b3f9275c60c8538ad1c6b8f8e4baa]), block #2005847 hash in Dogecoin (0xfa3c7da0e1ecc5ab3df86bd71e8abc7f0747e3816047fd2c7140d78549c5d3ec)
+2021-06-22 14:51:41 DEBUG - [Bitcoin|block_hash] Height: 2005848, Hash: 8d6ca3f2bcab496ef57c2ef58a19cc12dc38990aed8cbd5a033f523da1377e8a
+2021-06-22 14:51:41 DEBUG - [Bitcoin|block] Hash: 8d6ca3f2bcab496ef57c2ef58a19cc12dc38990aed8cbd5a033f523da1377e8a, Tx size: 1
+2021-06-22 14:51:41 INFO - [Bitcoin|block_by_height] Block #2005848 (8d6ca3f2bcab496ef57c2ef58a19cc12dc38990aed8cbd5a033f523da1377e8a), Tx size: 1
+2021-06-22 14:51:41 WARN - [Service|new] The block #2005848 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005848 hash in ChainX ([0x0000000000000014f8e4e1c8ae7deb4c3cd9f55764fbd9404047793a3337045e]), block #2005848 hash in Dogecoin (0x8d6ca3f2bcab496ef57c2ef58a19cc12dc38990aed8cbd5a033f523da1377e8a)
+2021-06-22 14:51:41 DEBUG - [Bitcoin|block_hash] Height: 2005849, Hash: af15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c
+2021-06-22 14:51:42 DEBUG - [Bitcoin|block] Hash: af15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c, Tx size: 1
+2021-06-22 14:51:42 INFO - [Bitcoin|block_by_height] Block #2005849 (af15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c), Tx size: 1
+2021-06-22 14:51:42 WARN - [Service|new] The block #2005849 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005849 hash in ChainX ([0x00000000000000235fbf42753e73b654ae7914d661c9e6acf5340a5da5afb8f9]), block #2005849 hash in Dogecoin (0xaf15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c)
+2021-06-22 14:51:42 DEBUG - [Bitcoin|block_hash] Height: 2005850, Hash: b46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad
+2021-06-22 14:51:42 DEBUG - [Bitcoin|block] Hash: b46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad, Tx size: 1
+2021-06-22 14:51:42 INFO - [Bitcoin|block_by_height] Block #2005850 (b46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad), Tx size: 1
+2021-06-22 14:51:42 WARN - [Service|new] The block #2005850 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005850 hash in ChainX ([0x00000000000000058dd81eab7908968d5ad2ba974f70b5f75884f7c7e50937d3]), block #2005850 hash in Dogecoin (0xb46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad)
+2021-06-22 14:51:42 INFO - [Service|new] Dogecoin Blocks: []
+2021-06-22 14:51:42 INFO - [Service|relay] Start to relay the Dogecoin block into the ChainX network, Confirmed Block #2005847, Current Block #2005850
+2021-06-22 15:04:16 INFO - ================================================================================
+2021-06-22 15:04:16 INFO - Release Version:   2.0.8-1
+2021-06-22 15:04:16 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 15:04:16 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 15:04:16 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 15:04:16 INFO - ================================================================================
+2021-06-22 15:04:16 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 15:04:16 INFO - Dogecoin Block Waiting Interval: [120 seconds]
+2021-06-22 15:04:16 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 15:04:16 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 15:04:16 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 15:04:17 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 15:04:17 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 15:04:17 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 15:04:17 INFO - [Service|new] Connecting Dogecoin node: http://auth:dogecoin-1c2s4d@116.85.70.172:18337/
+2021-06-22 15:04:17 INFO - [Service|new] Connected Dogecoin node: http://auth:dogecoin-1c2s4d@116.85.70.172:18337/
+2021-06-22 15:04:17 INFO - [ChainX|chain_genesis_info] Dogecoin Genesis Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 15:04:17 INFO - [ChainX|Dogecoin_confirmed_index] Height #2005849, Hash: 0x00000000000000235fbf42753e73b654ae7914d661c9e6acf5340a5da5afb8f9
+2021-06-22 15:04:17 INFO - [ChainX|Dogecoin_best_index] Height #2005852, Hash: 0x0000000000000036b71244dd33aa7d85b4322545222f23e28c06258bf51b4a79
+2021-06-22 15:04:17 INFO - [Service|new] Confirmed Height: 2005849, Best Height: 2005852
+2021-06-22 15:04:17 INFO - [Service|new] Fetching Dogecoin block hashes (#2005849-#2005852) from ChainX network
+2021-06-22 15:04:17 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005849, Hashes: [0x00000000000000235fbf42753e73b654ae7914d661c9e6acf5340a5da5afb8f9]
+2021-06-22 15:04:17 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005850, Hashes: [0x00000000000000058dd81eab7908968d5ad2ba974f70b5f75884f7c7e50937d3]
+2021-06-22 15:04:17 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005851, Hashes: [0x000000000000001329a2874b5c5e521e51db1922343c46cea8059dc2f834e21d]
+2021-06-22 15:04:17 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005852, Hashes: [0x0000000000000036b71244dd33aa7d85b4322545222f23e28c06258bf51b4a79]
+2021-06-22 15:04:17 INFO - [Service|new] Fetching Dogecoin blocks (#2005849-#2005852) from Dogecoin network
+2021-06-22 15:04:17 DEBUG - [Dogecoin|block_hash] Height: 2005849, Hash: af15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c
+2021-06-22 15:04:17 DEBUG - [Dogecoin|block] Hash: af15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c, Tx size: 1
+2021-06-22 15:04:17 INFO - [Dogecoin|block_by_height] Block #2005849 (af15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c), Tx size: 1
+2021-06-22 15:04:17 WARN - [Service|new] The block #2005849 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005849 hash in ChainX ([0x00000000000000235fbf42753e73b654ae7914d661c9e6acf5340a5da5afb8f9]), block #2005849 hash in Dogecoin (0xaf15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c)
+2021-06-22 15:04:17 DEBUG - [Dogecoin|block_hash] Height: 2005850, Hash: b46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad
+2021-06-22 15:04:17 DEBUG - [Dogecoin|block] Hash: b46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad, Tx size: 1
+2021-06-22 15:04:17 INFO - [Dogecoin|block_by_height] Block #2005850 (b46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad), Tx size: 1
+2021-06-22 15:04:17 WARN - [Service|new] The block #2005850 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005850 hash in ChainX ([0x00000000000000058dd81eab7908968d5ad2ba974f70b5f75884f7c7e50937d3]), block #2005850 hash in Dogecoin (0xb46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad)
+2021-06-22 15:04:17 DEBUG - [Dogecoin|block_hash] Height: 2005851, Hash: f2233c0d61eb094a0f0157895ebfd9c081eadd6b211f46b197f4be0113cfe5d2
+2021-06-22 15:04:17 DEBUG - [Dogecoin|block] Hash: f2233c0d61eb094a0f0157895ebfd9c081eadd6b211f46b197f4be0113cfe5d2, Tx size: 1
+2021-06-22 15:04:17 INFO - [Dogecoin|block_by_height] Block #2005851 (f2233c0d61eb094a0f0157895ebfd9c081eadd6b211f46b197f4be0113cfe5d2), Tx size: 1
+2021-06-22 15:04:17 WARN - [Service|new] The block #2005851 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005851 hash in ChainX ([0x000000000000001329a2874b5c5e521e51db1922343c46cea8059dc2f834e21d]), block #2005851 hash in Dogecoin (0xf2233c0d61eb094a0f0157895ebfd9c081eadd6b211f46b197f4be0113cfe5d2)
+2021-06-22 15:04:17 DEBUG - [Dogecoin|block_hash] Height: 2005852, Hash: 32274854a84be38569b29ddcbb5cd7d16242305bbd9298bfb545dc227bfc838c
+2021-06-22 15:04:17 DEBUG - [Dogecoin|block] Hash: 32274854a84be38569b29ddcbb5cd7d16242305bbd9298bfb545dc227bfc838c, Tx size: 1
+2021-06-22 15:04:17 INFO - [Dogecoin|block_by_height] Block #2005852 (32274854a84be38569b29ddcbb5cd7d16242305bbd9298bfb545dc227bfc838c), Tx size: 1
+2021-06-22 15:04:17 WARN - [Service|new] The block #2005852 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005852 hash in ChainX ([0x0000000000000036b71244dd33aa7d85b4322545222f23e28c06258bf51b4a79]), block #2005852 hash in Dogecoin (0x32274854a84be38569b29ddcbb5cd7d16242305bbd9298bfb545dc227bfc838c)
+2021-06-22 15:04:17 INFO - [Service|new] Dogecoin Blocks: []
+2021-06-22 15:04:17 INFO - 1111111111
+2021-06-22 15:04:17 INFO - [Service|relay] Start to relay the Dogecoin block into the ChainX network, Confirmed Block #2005849, Current Block #2005852
+2021-06-22 15:04:17 INFO - 22222222
+2021-06-22 15:11:59 INFO - ================================================================================
+2021-06-22 15:11:59 INFO - Release Version:   2.0.8-1
+2021-06-22 15:11:59 INFO - Git Commit Hash:   5311e2db1bdea6feea21932a5035a748df320bfa
+2021-06-22 15:11:59 INFO - Git Commit Branch: polkadot-v0.9.1
+2021-06-22 15:11:59 INFO - Rust Version:      rustc 1.52.1 (9bc8c42bb 2021-05-09)
+2021-06-22 15:11:59 INFO - ================================================================================
+2021-06-22 15:11:59 INFO - Log: [level: DEBUG, path: "log/btc_relay.log", roll size: 100 MB, roll count: 5]
+2021-06-22 15:11:59 INFO - Dogecoin Block Waiting Interval: [120 seconds]
+2021-06-22 15:11:59 INFO - ChainX: [http://117.51.148.252:8086/]
+2021-06-22 15:11:59 INFO - ChainX Relay Push Header Only: [false]
+2021-06-22 15:11:59 INFO - [Service|new] Connecting ChainX node: http://117.51.148.252:8086/
+2021-06-22 15:12:00 INFO - [ChainX|new] ChainX Info: [ChainX Genesis: 0x5aa42cb1d832966c7fb1f686e52a11db226bb1fe3d19db6a6bb04bea54c370ce, Bitcoin Network: Testnet, Bitcoin Min Deposit: 100000, Bitcoin Withdrawal Fee: 500000]
+2021-06-22 15:12:00 INFO - [Service|new] Connected ChainX node: http://117.51.148.252:8086/
+2021-06-22 15:12:00 INFO - [Service|new] Signer Account: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+2021-06-22 15:12:00 INFO - [Service|new] Connecting Dogecoin node: http://auth:dogecoin-1c2s4d@116.85.70.172:18337/
+2021-06-22 15:12:00 INFO - [Service|new] Connected Dogecoin node: http://auth:dogecoin-1c2s4d@116.85.70.172:18337/
+2021-06-22 15:12:00 INFO - [ChainX|chain_genesis_info] Dogecoin Genesis Block Height #2004180 (0x0000000000000000f02c4238bbde6b9617e8407f9a525cd4e44422cf7333ca64)
+2021-06-22 15:12:00 INFO - [ChainX|Dogecoin_confirmed_index] Height #2005849, Hash: 0x00000000000000235fbf42753e73b654ae7914d661c9e6acf5340a5da5afb8f9
+2021-06-22 15:12:00 INFO - [ChainX|Dogecoin_best_index] Height #2005852, Hash: 0x0000000000000036b71244dd33aa7d85b4322545222f23e28c06258bf51b4a79
+2021-06-22 15:12:00 INFO - [Service|new] Confirmed Height: 2005849, Best Height: 2005852
+2021-06-22 15:12:00 INFO - [Service|new] Fetching Dogecoin block hashes (#2005849-#2005852) from ChainX network
+2021-06-22 15:12:00 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005849, Hashes: [0x00000000000000235fbf42753e73b654ae7914d661c9e6acf5340a5da5afb8f9]
+2021-06-22 15:12:00 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005850, Hashes: [0x00000000000000058dd81eab7908968d5ad2ba974f70b5f75884f7c7e50937d3]
+2021-06-22 15:12:00 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005851, Hashes: [0x000000000000001329a2874b5c5e521e51db1922343c46cea8059dc2f834e21d]
+2021-06-22 15:12:00 INFO - [ChainX|Dogecoin_block_hash_for] Height #2005852, Hashes: [0x0000000000000036b71244dd33aa7d85b4322545222f23e28c06258bf51b4a79]
+2021-06-22 15:12:00 INFO - [Service|new] Fetching Dogecoin blocks (#2005849-#2005852) from Dogecoin network
+2021-06-22 15:12:00 DEBUG - [Dogecoin|block_hash] Height: 2005849, Hash: af15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c
+2021-06-22 15:12:00 DEBUG - [Dogecoin|block] Hash: af15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c, Tx size: 1
+2021-06-22 15:12:00 INFO - [Dogecoin|block_by_height] Block #2005849 (af15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c), Tx size: 1
+2021-06-22 15:12:00 WARN - [Service|new] The block #2005849 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005849 hash in ChainX ([0x00000000000000235fbf42753e73b654ae7914d661c9e6acf5340a5da5afb8f9]), block #2005849 hash in Dogecoin (0xaf15bc84d61ef025123986b1c9e86ea1ec3170fa2d6f8d4f068f8d6f551e628c)
+2021-06-22 15:12:00 DEBUG - [Dogecoin|block_hash] Height: 2005850, Hash: b46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad
+2021-06-22 15:12:00 DEBUG - [Dogecoin|block] Hash: b46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad, Tx size: 1
+2021-06-22 15:12:00 INFO - [Dogecoin|block_by_height] Block #2005850 (b46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad), Tx size: 1
+2021-06-22 15:12:00 WARN - [Service|new] The block #2005850 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005850 hash in ChainX ([0x00000000000000058dd81eab7908968d5ad2ba974f70b5f75884f7c7e50937d3]), block #2005850 hash in Dogecoin (0xb46f027308106b453ced6697140e82aff97618b1c7c80efa2253e4e1c25565ad)
+2021-06-22 15:12:00 DEBUG - [Dogecoin|block_hash] Height: 2005851, Hash: f2233c0d61eb094a0f0157895ebfd9c081eadd6b211f46b197f4be0113cfe5d2
+2021-06-22 15:12:00 DEBUG - [Dogecoin|block] Hash: f2233c0d61eb094a0f0157895ebfd9c081eadd6b211f46b197f4be0113cfe5d2, Tx size: 1
+2021-06-22 15:12:00 INFO - [Dogecoin|block_by_height] Block #2005851 (f2233c0d61eb094a0f0157895ebfd9c081eadd6b211f46b197f4be0113cfe5d2), Tx size: 1
+2021-06-22 15:12:00 WARN - [Service|new] The block #2005851 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005851 hash in ChainX ([0x000000000000001329a2874b5c5e521e51db1922343c46cea8059dc2f834e21d]), block #2005851 hash in Dogecoin (0xf2233c0d61eb094a0f0157895ebfd9c081eadd6b211f46b197f4be0113cfe5d2)
+2021-06-22 15:12:00 DEBUG - [Dogecoin|block_hash] Height: 2005852, Hash: 32274854a84be38569b29ddcbb5cd7d16242305bbd9298bfb545dc227bfc838c
+2021-06-22 15:12:00 DEBUG - [Dogecoin|block] Hash: 32274854a84be38569b29ddcbb5cd7d16242305bbd9298bfb545dc227bfc838c, Tx size: 1
+2021-06-22 15:12:00 INFO - [Dogecoin|block_by_height] Block #2005852 (32274854a84be38569b29ddcbb5cd7d16242305bbd9298bfb545dc227bfc838c), Tx size: 1
+2021-06-22 15:12:00 WARN - [Service|new] The block #2005852 on the Dogecoin network and the ChainX network does not match, there may be a fork block on ChainX network, we need to resubmit this block, block #2005852 hash in ChainX ([0x0000000000000036b71244dd33aa7d85b4322545222f23e28c06258bf51b4a79]), block #2005852 hash in Dogecoin (0x32274854a84be38569b29ddcbb5cd7d16242305bbd9298bfb545dc227bfc838c)
+2021-06-22 15:12:00 INFO - [Service|new] Dogecoin Blocks: []
+2021-06-22 15:12:00 INFO - 1111111111
+2021-06-22 15:12:00 INFO - [Service|relay] Start to relay the Dogecoin block into the ChainX network, Confirmed Block #2005849, Current Block #2005852
+2021-06-22 15:12:00 INFO - 22222222
